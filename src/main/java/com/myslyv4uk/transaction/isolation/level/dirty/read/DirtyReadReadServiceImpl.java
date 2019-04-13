@@ -11,7 +11,8 @@ import com.myslyv4uk.transaction.isolation.level.persistence.repository.Customer
 
 
 @Service
-@Transactional(isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW)
+//@Transactional(isolation = Isolation.READ_UNCOMMITTED, propagation = Propagation.REQUIRES_NEW,
+//    rollbackFor = Exception.class)
 public class DirtyReadReadServiceImpl implements DirtyReadService {
 
   private final CustomerRepository customerRepository;
